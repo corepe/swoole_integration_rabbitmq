@@ -1,0 +1,1 @@
+# swoole_integration_rabbitmq
