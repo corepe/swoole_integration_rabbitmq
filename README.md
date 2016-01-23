@@ -28,7 +28,7 @@ Server Software:        swoole-http-server
 Server Hostname:        localhost
 Server Port:            9501
 
-Document Path:          /?status=23
+Document Path:          /?
 Document Length:        21 bytes
 
 Concurrency Level:      100
