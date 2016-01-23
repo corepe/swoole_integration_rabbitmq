@@ -3,63 +3,64 @@
 
 
 ```
-#ab -c 100  -n 10000 -k  http://localhost:9501/?
+#ab -n 30000 -c 500 -k http://10.132.43.14:9501/?
 
 -- output: 
-This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
-Benchmarking localhost (be patient)
-Completed 1000 requests
-Completed 2000 requests
+Benchmarking 10.132.43.14 (be patient)
 Completed 3000 requests
-Completed 4000 requests
-Completed 5000 requests
 Completed 6000 requests
-Completed 7000 requests
-Completed 8000 requests
 Completed 9000 requests
-Completed 10000 requests
-Finished 10000 requests
+Completed 12000 requests
+Completed 15000 requests
+Completed 18000 requests
+Completed 21000 requests
+Completed 24000 requests
+Completed 27000 requests
+Completed 30000 requests
+Finished 30000 requests
 
 
 Server Software:        swoole-http-server
-Server Hostname:        localhost
+Server Hostname:        10.132.43.14
 Server Port:            9501
 
 Document Path:          /?
 Document Length:        21 bytes
 
-Concurrency Level:      100
-Time taken for tests:   0.631 seconds
-Complete requests:      10000
+Concurrency Level:      500
+Time taken for tests:   0.659 seconds
+Complete requests:      30000
 Failed requests:        0
-Keep-Alive requests:    10000
-Total transferred:      1740000 bytes
-HTML transferred:       210000 bytes
-Requests per second:    15840.68 [#/sec] (mean)
-Time per request:       6.313 [ms] (mean)
-Time per request:       0.063 [ms] (mean, across all concurrent requests)
-Transfer rate:          2691.68 [Kbytes/sec] received
+Write errors:           0
+Keep-Alive requests:    30000
+Total transferred:      5221044 bytes
+HTML transferred:       630126 bytes
+Requests per second:    45490.52 [#/sec] (mean)
+Time per request:       10.991 [ms] (mean)
+Time per request:       0.022 [ms] (mean, across all concurrent requests)
+Transfer rate:          7731.38 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.3      0       4
-Processing:     1    6   3.8      5      68
-Waiting:        1    6   3.7      5      68
-Total:          1    6   3.8      5      68
+Connect:        0    0   1.0      0      11
+Processing:     3   11   4.0     10      51
+Waiting:        1   11   4.0     10      51
+Total:          3   11   4.2     10      51
 
 Percentage of the requests served within a certain time (ms)
-  50%      5
-  66%      6
-  75%      8
-  80%      8
-  90%     10
-  95%     13
-  98%     15
-  99%     16
- 100%     68 (longest request)
+  50%     10
+  66%     11
+  75%     12
+  80%     13
+  90%     15
+  95%     19
+  98%     23
+  99%     26
+ 100%     51 (longest request)
 
 ```
  
